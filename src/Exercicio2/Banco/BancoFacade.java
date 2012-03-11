@@ -14,6 +14,7 @@ public class BancoFacade {
     private Persistencia persist;
     private static BancoFacade bancoFacade;
     
+    //Singleton
     public synchronized static BancoFacade getInstance(){
         if(bancoFacade == null){
             bancoFacade = new BancoFacade();
@@ -32,14 +33,6 @@ public class BancoFacade {
 
     public Conta getConta(String numConta) {
         return banco.getConta(numConta);
-    }
-
-    public void salvarContas(Map<String,Conta> contas){
-        persist.salvarContas(contas);
-    }
-
-    public Map<String, Conta> carregarContas() {
-        return persist.carregarContas();
     }
     
     public Map<String,Conta> getAllContas(){

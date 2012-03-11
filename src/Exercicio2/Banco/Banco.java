@@ -18,11 +18,10 @@ public class Banco {
     }
 
     public void criarConta(Conta conta) {       
-        contasMap.put(conta.getNumero(), conta);
+        contasMap.put(conta.getNumConta(), conta);
     }
 
     public Conta getConta(String numConta) {
-
         Conta conta = contasMap.get(numConta);
         if (conta==null) {
             throw new BancoException("Conta Inexistente.");

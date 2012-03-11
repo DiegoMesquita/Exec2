@@ -9,24 +9,24 @@ import java.io.Serializable;
  */
 public class Conta implements Serializable{
 
+    private String numConta;
     private double saldo;
-    private String numero;
-
-    public Conta(String numero, double saldo) {
-        this.numero = numero;
+    
+    public Conta(String numConta, double saldo) {
+        this.numConta = numConta;
         this.saldo = saldo;
     }
 
-    public String getNumero() {
-        return this.numero;
+    public String getNumConta() {
+        return this.numConta;
     }
 
     public double getSaldo() {
         return this.saldo;
     }
 
-    public void setNumero(String numero) {
-        this.numero = numero;
+    public void setNumConta(String numConta) {
+        this.numConta = numConta;
     }
 
     public void setSaldo(double saldo) {
@@ -35,6 +35,6 @@ public class Conta implements Serializable{
 
     @Override
     public String toString() {
-        return "Conta: "+numero+ "\nSaldo:R$ "+ saldo;
+        return "Conta: "+numConta+ "\nSaldo:R$ "+ saldo;
     }
 }

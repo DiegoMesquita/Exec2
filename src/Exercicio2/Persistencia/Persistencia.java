@@ -15,6 +15,10 @@ import java.util.Map;
  * 
  */
 public class Persistencia {
+    
+    public Persistencia(){
+        
+    }
 
     public void salvarContas(Map<String, Conta> contas) {        
         ObjectOutputStream out = null;
